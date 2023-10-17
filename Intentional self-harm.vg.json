@@ -1,0 +1,67 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple radial chart with embedded data.",
+  "title": {
+    "text": ["Figure 2"]
+  },
+  "data": {
+    "url":"https://raw.githubusercontent.com/peiyingchong/HW10_FIT3179/main/Intentional%20self-harm%2C%20Age-standardised%20death%20rates%20and%20median%20age%20at%20death%20by%20Country%20of%20birth%20region%2C%202018-2022.csv"
+  },
+  "width": 400,
+  "height":400,
+  "layer": [{
+    "mark": {"type": "arc", "innerRadius": 20, "stroke": "#fff"}
+    
+  },{
+    "mark": {"type": "text", "radiusOffset": 10},
+    "encoding": {
+      "text": {"field": "Rate(b)", "type": "quantitative"}
+    }
+  }],
+  "encoding": {
+    "theta": {"field": "Rate(b)", "type": "quantitative", "stack": true, "sort": "ascending"},
+    "radius": {"field": "Rate(b)", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
+    "color": {
+      "field": "Country of birth region (g)", 
+      "title": "Country of birth region",
+      "type": "nominal",
+      "scale":{
+          "domain":[
+              "Australia",
+              "Oceania and Antarctica",
+              "North-West Europe", 
+              "Southern and Eastern Europe", 
+              "North Africa and the Middle East",
+              "South-East Asia", 
+              "North-East Asia", 
+              "Southern and Central Asia", 
+              "America", 
+              "Sub-Saharan Africa"
+          ],
+          "range":[
+            "#0047AB",
+            "#f19d32",
+            "#999788",
+            "#c0b2e6",
+            "#9f7563",
+            "#dab71f",
+            "#7a1e47",
+            "#ffbb78",
+            "#684c6b",
+            "#eaa8b7"
+          ]
+      }},
+      "tooltip":[
+        {"field":"Country of birth region (g)","type":"nominal","title":"Country of birth region"},
+        {"field":"Rate(b)","type":"quantitative","format":",","title":"Age-standardised death rates"},
+        {"field":"Number","type":"quantitative","format":",","title":"Number of death"}
+    ]
+  },
+  "config": {
+    "background":null,
+    "view": {
+      "stroke": "transparent"
+   },
+   "legend": { "orient": "left" } 
+  }
+}

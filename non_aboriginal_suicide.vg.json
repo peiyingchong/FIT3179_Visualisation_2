@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "title": {
+      "text": ["Figure 3"]
+    },
+    "projection": {"type": "equalEarth"},
+    "data": {
+      "url": "https://raw.githubusercontent.com/peiyingchong/FIT3179/main/aus.topojson",
+      "format": {"type": "topojson", "feature": "aus_state"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.STATE_NAME",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/peiyingchong/FIT3179_Visualisation2/main/Suicide%20by%20State(Non-aboriginal).csv"
+          },
+          "key": "State",
+          "fields": ["Rounded"]
+        }
+      }
+    ],
+    "mark": {"type": "geoshape"},
+    "encoding": {
+      "color": {
+        "field": "Rounded",
+        "type": "quantitative",
+        "title": "Suicide Percentage per 1000",
+        "scale": {
+          "type": "log",
+          "domain": [10,19]
+      }
+      },
+      "tooltip": [
+        {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"},
+        {
+          "field": "Rounded",
+          "type": "quantitative",
+          "title": "Percentage of suicide (%)"
+        }
+      ]
+    },
+    "config": {
+      "background":null,
+      "view": {
+        "stroke": "transparent"
+     },
+     "legend": { "orient": "bottom-right"} 
+    }
+  }

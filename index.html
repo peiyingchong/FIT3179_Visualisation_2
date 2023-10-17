@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2">
+    </script> <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0">
+    </script> <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script src="vega_lite_vis.js"></script>
+    <link rel = "stylesheet" href = "style.css">
+
+    <div class ="visualization-container-middle">
+    <p id="triggerid">Trigger Warning </p>
+    <p class="class-select"> In today's data visualization, we delve into a critical issue that touches the lives of many - suicide.
+        <br> <br>
+        The content discussed can be emotionally challenging and triggering for some viewers. 
+         <br> <br>
+         This data visualization includes statistics, stories, and information related to suicide. 
+         It may contain content that is distressing or unsettling.
+         We want to ensure that you are aware of this in advance so you can make an informed decision about proceeding. <br> <br>
+         If you feel that this topic may be distressing or triggering for you, we encourage you to prioritize your emotional well-being.<br>
+        <br>
+    </p>
+    </div>
+</head>
+<body>
+    <p> <br> </p>   
+    <h1 id="title"> Understanding Suicide in Australia: Raising Awareness</h1>
+    <p> <br> </p>
+
+    <div class="content-container">
+        <div class="text-left">
+            <h2>Leading causes of death, Australia </h2>
+            <p>
+                Suicide stands as a significant societal concern, ranking as the <b>15th leading cause of death</b> in 2022 (Figure 1).
+                Australian Bureau of statistics reveals that individuals who lost their lives to suicide had a median age of 45.6 at the time of their passing, 
+                and the year 2022 witnessed a total of 3,249 recorded suicides. 
+                <br> <br>
+                These stark figures underscore the urgency for heightened awareness 
+                and support mechanisms to address the alarming issue of suicide. It is evident that this is an issue demanding serious attention
+                and a collective effort to prevent further loss of life.
+        </p>
+        </div>
+        
+        <div class="vis-right" id="line_chart">
+            <!-- Visualization goes here -->
+        </div>
+    </div>
+    <p><br>    <br></p>
+    <div class="content-container">
+        <div class="text-right">
+            <h2  id="padding"> Suicide by region of birth 2018-2022</h2>
+            <p  id="padding">
+                Figure 2 sheds light on a substantial finding. Over the five-year period from 2018 to 2022, 
+                the dataset records a total of  <b>12,327</b> documented <b>suicides</b>, making it the highest among all regions examined. 
+                <br> <br>
+                Notably, individuals born in Australia had a striking suicide rate of 14.7 deaths per 100,000 people, 
+                surpassing the rates in America (8.2 deaths per 100,000 people) and Oceania and Antarctica (14.2 deaths per 100,000 people).
+                 This data underscores the significance of understanding and addressing the variations in suicide rates among 
+                 different regions, with Australia standing out as an area requiring particular attention and support.
+        </div>
+        <div class="vis-left" id="radial_chart">
+            <!-- Visualization goes here -->
+        </div>
+    </div>
+    <p><br>    <br></p>
+    <div class="content-container">
+        <div class="text-left">
+            <h2>Number of suicide deaths by state or territory of usual residence  <br> <br></h2>
+            <p>
+                The data from the Australian Bureau of Statistics underscores a concerning trend where a substantial majority of these tragic fatalities, making up three-quarters of the total, were concentrated among individuals who called New South Wales, Victoria, and Queensland their usual residence.
+                <br> <br>Notably, the Northern Territory displayed a particularly alarming suicide rate, peaking at 20.5 suicides per 100,000 people (Figure 3),
+                raising significant concerns for this region. 
+            </div>
+        <div class="vis-right" id="chloro_map_non">
+            <!-- Visualization goes here -->
+        </div>
+    </div>
+    
+    <p><br>    <br></p>
+
+    <div class="content-container">
+        <div class="text-right">
+            <h2  id="padding">Suicide by age and sex</h2>
+            <p  id="padding">
+                Figure 4 vividly illustrates the increased vulnerability of young and middle-aged individuals to suicide,
+                accounting for a significant 81.7% of all suicide cases among those under the age of 65. 
+                This is further emphasized by the notably lower median age of suicide victims at 45.6 years, 
+                a stark contrast to the general median age of death at 82.2 years.
+                <br> <br>
+                <b>Gender disparities</b> were also evident, with <b>15.5%</b> of <b>female</b> suicides occurring in individuals under 25 years of age, 
+                and <b>10.5%</b> among <b>males</b> in the same age group. 
+                These findings highlight the distinct age-related trends in suicide rates, underscoring the heightened susceptibility 
+                of younger populations. 
+        </p>
+        </div>
+        <div class="vis-left" id="bar_plot">
+            <!-- Visualization goes here -->
+        </div>
+    </div>
+    <p><br>    <br></p>
+
+    <div class="content-container">
+        <div class="text-right">
+            <h2 id="padding">Top risk factor by age<br> <br></h2>
+            <p id="padding">
+                Mood disorders, particularly <b>depression</b>, emerged as the predominant risk factor across all age groups, except for individuals aged 85 years and older. In this oldest age category, the primary risk factor remained limitations in daily activities due to illness and disability.
+                <br> <br>
+                Conversely, factors linked to employment and unemployment were most frequently cited as risk factors in the 
+                age group spanning 45 to 64 years. These findings highlight the varying risk factors associated with different 
+                age segments, emphasizing the need for tailored approaches to mental health and well-being support. </p>
+        </div>
+        <div class="vis-left" id="parallel_c_plot">
+            <!-- Visualization goes here -->
+        </div>
+    </div>
+
+    <p><br>    <br></p>
+    
+
+    <div class="content-container-black">
+        <div class="tr">
+        <h5>Reference:<br> <br>
+            Australian Bureau of Statistics. (2019, September 25). Causes of Death, Australia, 2018 | Australian Bureau of Statistics. Www.abs.gov.au. <a href="URL">https://www.abs.gov.au/statistics/health/causes-death/causes-death-australia/latest-release#leading-causes-of-death-in-aboriginal-and-torres-strait-islander-people</a>
+        </h5>
+          </div>  
+‌
+    </div>
+    
+
+</body>
+</html>

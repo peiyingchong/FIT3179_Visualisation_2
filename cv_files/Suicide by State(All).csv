@@ -1,0 +1,19 @@
+﻿State,Year,Population 2021 ('000),Category,Suicide Number,Suicide Percentage per '000,Rounded
+New South Wales,2021,8189.3,Non Indigenous,894,10.91668397,10.9
+Victoria,2021,6649.2,Non Indigenous,675,10.15159718,10.2
+Queensland,2021,5221.2,Non Indigenous,786,15.05401057,15.1
+South Australia,2021,1773.2,Non Indigenous,229,12.91450485,12.9
+Western Australia,2021,2681.6,Non Indigenous,390,14.54355609,14.5
+Tasmania,2021,541.5,Non Indigenous,81,14.95844875,15.0
+Northern Territory,2021,246.3,Non Indigenous,46,18.67641088,18.7
+Australian Capital Teritorry ,2021,432.3,Non Indigenous,65,15.03585473,15.0
+Australia,2021,25639.3,Non Indigenous,3166,12.34823104,12.3
+New South Wales,2021,8189.3,Indigenous,54,0.659397018,0.7
+Victoria,2021,6649.2,Indigenous,18,0.270709258,0.3
+Queensland,2021,5221.2,Indigenous,57,1.091703057,1.1
+South Australia,2021,1773.2,Indigenous,13,0.73313783,0.7
+Western Australia,2021,2681.6,Indigenous,48,1.789976134,1.8
+Tasmania,2021,541.5,Indigenous,4,0.738688827,0.7
+Northern Territory,2021,246.3,Indigenous,24,9.744214373,9.7
+Australian Capital Teritorry ,2021,432.3,Indigenous,1,0.231320842,0.2
+Australia,2021,25639.3,Indigenous,219,0.854157485,0.9

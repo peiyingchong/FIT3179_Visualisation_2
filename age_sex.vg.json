@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A population pyramid for the US in 2000.",
+    "title": {
+      "text": ["Figure 4"]
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/peiyingchong/FIT3179_Visualisation2/main/Suicide%20by%20age%20and%20sex%20as%20a%20proportion%20of%20total%20suicides%2C%202022%20(a)(b)(c)(d)(e).csv"
+    },
+    "width": 400,
+    "height": 400,
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Age",
+        "type": "ordinal",
+        "sort": "ascending" 
+      },
+      "y": {
+        "field": "Proportion(%)",
+        "type": "quantitative",
+        "title": "Proportion of death (%)"
+        
+      },
+      "color": {
+        "field": "Sex",
+        "type": "nominal",
+        "title": "Sex",
+        "scale": {
+            "domain": ["Female", "Male"], 
+            "range": ["#F9BC7B", "#B07BF9"] 
+          }
+      },
+      "tooltip": [
+        { "field": "Age", "type": "nominal", "title": "Age Group" },
+        { "field": "Proportion(%)", "type": "quantitative", "title": "Proportion(%)" },
+        { "field": "Sex", "type": "nominal", "title": "Sex" }
+      ]
+  
+    },
+    "config": {
+      "axis": { "grid": false },
+        "background":null,
+        "view": {
+          "stroke": "transparent"
+       },
+       "legend": null,
+      "mark": { "invalid": null },
+      "legend": { "orient": "left"} 
+    }
+  }
+  
